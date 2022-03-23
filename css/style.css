@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;0,800;1,400&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0%;
+  padding: 0%;
+}
+
+header {
+  background-color: rgb(218, 218, 218);
+}
+
+footer {
+  background-color: rgb(218, 218, 218);
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-decoration: underline;
+}
+
+.fontBig {
+  font-size: 4rem;
+  font-weight: 200;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+div p a {
+  text-decoration: none;
+  color: black;
+}
+
+div p a:hover {
+  text-decoration: underline;
+}
+
+li {
+  display: inline-block;
+  width: 10%;
+  position: relative;
+}
+
+.textSmall {
+  font-size: 1rem;
+}
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: center;
+}
+.textRight {
+  text-align: center;
+}
+.textItalic {
+  font-style: italic;
+}
+
+/* FLEXBOX */
+.padding {
+  padding: 20px;
+}
+.paddingbottom {
+  padding-bottom: 20px;
+}
+.container {
+  display: flex;
+  padding: 10px;
+}
+.nav {
+  text-align: center;
+}
+
+.row {
+  flex-direction: column;
+}
+
+.column {
+  flex-direction: column;
+}
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.noWrap {
+  flex-wrap: nowrap;
+}
+.center {
+  justify-content: center;
+}
+
+/* IMAGENES */
+.imageBig {
+  width: 60%;
+  justify-items: center;
+}
+
+.imageSmall {
+  width: 5rem;
+}
+
+.imgPortafolio {
+  width: 100%;
+}
+
+/*FOTOGRAFIAS */
+.grid-container3 {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 100%;
+  grid-template-areas: "tituloFotografia" "imgFotos1" "imgFotos2" "imgFotos3" "imgFotos4";
+}
+.tituloFotografia {
+  grid-area: tituloFotografia;
+}
+
+.imgFotos1 {
+  grid-area: imgFotos1;
+  width: 80%;
+}
+.imgFotos2 {
+  grid-area: imgFotos2;
+  width: 80%;
+}
+
+.imgFotos3 {
+  grid-area: imgFotos3;
+  width: 80%;
+}
+
+.imgFotos4 {
+  grid-area: imgFotos4;
+  width: 80%;
+}
+
+/* INDEX */
+.box {
+  text-align: center;
+  padding: 2rem;
+  margin: auto;
+}
+
+.grid-container2 {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-areas:
+    "picdg"
+    "textdg"
+    "picdw"
+    "textdw";
+}
+
+.picDg {
+  grid-area: picdg;
+  text-align: center;
+}
+
+.picDw {
+  grid-area: picdw;
+  text-align: center;
+}
+
+.textDg {
+  grid-area: textdg;
+  padding: 1rem;
+}
+
+.textDw {
+  grid-area: textdw;
+  padding: 1rem;
+}
+
+/*CONTACTO*/
+.grid-container2 {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "titulo1"
+    "form"
+    "iconos"
+    "titulo2"
+    "ubicacion";
+}
+
+.contactoTitulo1 {
+  grid-area: titulo1;
+}
+.contactoForm {
+  grid-area: form;
+}
+
+.contactoIconos {
+  grid-area: iconos;
+}
+
+.contactoTitulo2 {
+  grid-area: titulo2;
+}
+
+.contactoUbicacion {
+  grid-area: ubicacion;
+}
+
+/*ABOUT */
+.box2 {
+  padding: 2rem;
+  margin: auto;
+  width: 60%;
+  flex-direction: column;
+}
+
+/*PORTAFOLIO */
+.grid-container4 {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 20px;
+  grid-template-areas:
+    "tituloPor"
+    "bajadaPor"
+    "portafolio1"
+    "portafolio2"
+    "portafolio3"
+    "portafolio4";
+}
+.tituloPor {
+  grid-area: tituloPor;
+}
+.bajadaPor {
+  grid-area: bajadaPor;
+}
+.portafolio1 {
+  grid-area: portafolio1;
+}
+
+.portafolio2 {
+  grid-area: portafolio2;
+}
+
+.portafolio3 {
+  grid-area: portafolio3;
+}
+.portafolio4 {
+  grid-area: portafolio4;
+}
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+  /*NAV*/
+  .row {
+    flex-direction: row;
+  }
+  /* INDEX */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-areas:
+      "picdg textdg"
+      "textdw picdw";
+  }
+  .box {
+    padding: 2rem;
+    margin: auto;
+    text-align: left;
+  }
+
+  /* ABOUT */
+  .box2 {
+    padding: 2rem;
+    margin: auto;
+    width: 40%;
+  }
+  /* PORTAFOLIO */
+  .grid-container4 {
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-areas:
+      "tituloPor tituloPor tituloPor tituloPor"
+      "bajadaPor bajadaPor bajadaPor bajadaPor"
+      "portafolio1 portafolio2 portafolio3 portafolio4";
+  }
+
+  /*FOTOGRAFIA*/
+  .imgFotos {
+    width: 400px;
+  }
+
+  /* CONTACTO*/
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas:
+      "titulo1 titulo2"
+      "form ubicacion"
+      "iconos iconos";
+  }
+  /* FOTOGRAFIA */
+  .grid-container3 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-areas: "tituloFotografia tituloFotografia tituloFotografia tituloFotografia" "imgFotos1 imgFotos2 imgFotos3 imgFotos4";
+  }
+
+  .textRight {
+    text-align: right;
+  }
+  .textLeft {
+    text-align: left;
+  }
+}
